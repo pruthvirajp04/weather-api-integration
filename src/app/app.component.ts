@@ -10,6 +10,9 @@ export class AppComponent {
   city!: string ;
   weatherData: any;
 temperature : any;
+startTime : any;
+endTime : any;
+
   constructor(private weatherApiService: WeatherApiService) {
    }
 
@@ -17,7 +20,10 @@ temperature : any;
     this.weatherApiService.fetchWeatherData(this.city)
       .subscribe((data1:any) => {
         this.weatherData = data1;
-        this.temperature=data1.data.timelines[0].intervals[0].values.temperature
+        this.temperature=data1.data.timelines[0].intervals[0].values.temperature;
+     
+
+
         console.log(data1.data);
         
       }, error => {
