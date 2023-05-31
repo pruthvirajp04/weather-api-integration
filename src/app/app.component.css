@@ -1,0 +1,17 @@
+.mainBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    border: 2px solid black;
+    border-radius: 12px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: black;
+    color: white;
+}

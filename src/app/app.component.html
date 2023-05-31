@@ -1,10 +1,13 @@
-<h1>Weather App</h1>
-<input type="text" [(ngModel)]="city" placeholder="Enter city name" />
-<button (click)="fetchWeatherData()">Start</button>
+<div class="mainBox">
 
-<div *ngIf="weatherData">
-  <h2>Weather Information for {{ weatherData.name }}</h2>
-  <p>Temperature: {{ temperature}}°C</p>
-  <!-- <p>Humidity: {{ weatherData.main.humidity }}%</p>
-  <p>Weather: {{ weatherData.weather[0].description }}</p> -->
+  <h1>Weather App (Made by Pruthviraj Patil)</h1>
+  <!-- <input type="text" [(ngModel)]="city" placeholder="Enter city name" disabled/> -->
+  <button class="btn" (click)="fetchWeatherData()">Start</button>
+  
+  <div *ngIf="weatherData">
+    <h2>Weather Information for {{ weatherData.name }}</h2>
+    <p>Temperature: {{ temperature}}°C</p>
+    <!-- <p>Humidity: {{ weatherData.main.humidity }}%</p>
+    <p>Weather: {{ weatherData.weather[0].description }}</p> -->
+  </div>
 </div>
